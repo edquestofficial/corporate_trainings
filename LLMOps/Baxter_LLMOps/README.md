@@ -158,3 +158,5 @@ Step 3: Check if it Works
 |   Output:      |
 | Formatted Answer|
 +----------------+
+
+![AI Query System Flow](docs/ai_query_system_flow.png)
