@@ -106,57 +106,42 @@ Step 3: Check if it Works
 
 ##### flow digram ###########
 
-+----------------+
-|  User (Gradio) |
-|   Input:       |
-| Natural Language|
-|   Question     |
-+-------+--------+
-        |
-        | (1. User enters question)
-        v
-+-------+--------+
-|   Python Backend  |
-|  (forwards query) |
-+-------+--------+
-        |
-        | (2. Forwards to LLaMA)
-        v
-+-------+--------+
-|  LLaMA Model   |
-| (Interprets &  |
-|  Generates Solr |
-|   Query)       |
-+-------+--------+
-        |
-        | (3. Generates Solr query)
-        v
-+-------+--------+
-|   Python Backend  |
-|  (executes query)|
-+-------+--------+
-        |
-        | (4. Executes query on Solr)
-        v
-+-------+--------+
-|   Solr Database |
-| (Returns Relevant|
-|   Results)     |
-+-------+--------+
-        |
-        | (5. Returns results)
-        v
-+-------+--------+
-|   Python Backend  |
-|  (formats response)|
-+-------+--------+
-        |
-        | (6. Formats & sends to Gradio)
-        v
-+-------+--------+
-|  Gradio UI     |
-|   Output:      |
-| Formatted Answer|
-+----------------+
-
-![AI Query System Flow](docs/ai_query_system_flow.png)
++-+------------------+
+|   User enters    |
+|   Question       |
++------------------+
+          |
+          v
++------------------+
+| Python Backend   |
++------------------+
+          |
+          v
++------------------+
+|   LLaMA Model    |
+| (Generates Solr  |
+|      Query)      |
++------------------+
+          |
+          v
++------------------+
+|  Solr Database   |
+| (Executes Query) |
++------------------+
+          |
+          v
++------------------+
+|  Relevant Results|
++------------------+
+          |
+          v
++------------------+
+| Python Formats   |
+|   Response       |
++------------------+
+          |
+          v
++------------------+
+|   Gradio UI      |
+| Displays Answer  |
++------------------+
