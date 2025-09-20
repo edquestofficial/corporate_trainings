@@ -1,0 +1,23 @@
+[project]
+name = "src"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.29",
+    "langchain-core>=0.3.75",
+    "langchain-google-genai>=2.1.12",
+    "langchain-huggingface>=0.3.1",
+    "langchain-text-splitters>=0.3.11",
+    "langgraph>=0.6.7",
+    "pinecone>=7.3.0",
+    "pinecone-client==5.0.1",
+    "pypdf>=6.0.0",
+    "sentence-transformers==3.0.1",
+    "torch>=2.8.0",
+    "transformers>=4.56.1",
+    
+]
+
