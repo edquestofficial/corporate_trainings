@@ -9,33 +9,56 @@ The system is designed in two parts:
 A main orchestrator script ties both pipelines together for a complete workflow.
 
 ---
+##### python setup 
+
+### Install Python
+
+ Before setting up the project, you need Python 3.10+ installed.
+
+# Windows
+
+Download Python from python.org/downloads
+
+During installation, go with customize installationand  check ✅ “Add Python to PATH”.
+
+## Verify installation:
+
+python --version
+
 
 ## Environment Setup
 
-This project uses [`uv`](https://github.com/astral-sh/uv), a modern Python package manager, to simplify dependency management and virtual environment setup.  
+Initial Setup to setup the project
 
-### 1. Install uv
-```bash
-pip install uv
+Step 1:
+Open powershell:
+run: powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
+if you are using mac and linux you can follow this link 
 
-###
-# 2. Create a new project
-    uv init rag-pipeline
-    cd rag-pipeline
+https://docs.astral.sh/uv/getting-started/installation/ 
 
+Step 2:
+Check if UV installed
+Run: uv --version
+Run: uv --help
 
-# 3. (Optional) Create a virtual environment manually
+Step 3:
+Go to your project directory
+Run: uv init
 
-    If you prefer using venv:
-##
-python -m venv .venv
+Step 4:
+To icreate virtual environment 
+uv venv
+
+Activate your virtual environment
+
 source .venv/bin/activate   # Linux / macOS
 .venv\Scripts\activate      # Windows
 
-##
 
-4. #Install dependencies with uv
+step 5:
+#Install dependencies with uv
 
     You can add dependencies one by one with uv add <package>, or install them all at once:
 
@@ -88,3 +111,4 @@ python retrieval_pipeline.py
 
 Run the full pipeline
 python main.py
+
