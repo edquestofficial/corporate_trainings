@@ -52,7 +52,7 @@ def generate_answer(context, query, google_api_key):
 
 
 
-def get_result(query,pinecone_api_key,google_api_key):
+def get_result(query,pinecone_api_key="pcsk_5qj9jc_6WPE7Jr4rsB6GKM6nTZXL4EBpgu4oV6j6jh29TTnuEK8ihdZkqwtL9gQnh92T3b",google_api_key="AIzaSyDGcDBJjKJKfWRlkAzM_Gfk54MbC0fW3QM"):
 
     pc = Pinecone(api_key=pinecone_api_key)
     index = pc.Index("amity-database")
@@ -66,6 +66,7 @@ def get_result(query,pinecone_api_key,google_api_key):
 
     print("\n--- Final Answer ---")
     print(answer)
+    return answer
 
 if __name__ == "__main__":
 
